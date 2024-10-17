@@ -206,18 +206,36 @@
 
 
                 <div class="contectus-form-container">
-                <form class="form" action="">
-                    <div class="formfield-container">
-                        <input class="formfeild" type="text" name="name" id="" placeholder="Enter Your Name">
-                        <input class="formfeild" type="email" name="email" id="" placeholder="Enter Your E-mail Address">
-                        <input class="formfeild" type="text" name="subject" id="" placeholder="Enter Your Subject">
-                        <textarea name="message" id="" cols="30" rows="10" class="formfeild formfeild-textarea" placeholder="Enter Your message"></textarea>
-
-                    </div>
-                    <button type="submit" class="btn-pink" id="sumbit-btn">
-                        Sand Message <i class="sumbit-icon fa-solid fa-paper-plane"></i>
-                    </button>
-                </form>
+                    <form class="form" action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DQy00000DsWl1" method="POST">
+                        <!-- Hidden fields required by Salesforce Web-to-Lead -->
+                        <input type="hidden" name="oid" value="00DQy00000DsWl1">
+                        <input type="hidden" name="retURL" value="https://vinod73570.github.io/thank-you/">
+                        
+                        <div class="formfield-container">
+                            <!-- First Name -->
+                            <input class="formfeild" type="text" name="first_name" placeholder="Enter Your First Name" maxlength="40" required>
+                    
+                            <!-- Last Name -->
+                            <input class="formfeild" type="text" name="last_name" placeholder="Enter Your Last Name" maxlength="80" required>
+                            
+                            <!-- Email -->
+                            <input class="formfeild" type="email" name="email" placeholder="Enter Your E-mail Address" maxlength="80" required>
+                    
+                            <!-- Company -->
+                            <input class="formfeild" type="text" name="company" placeholder="Enter Your Company" maxlength="40">
+                    
+                            <!-- City -->
+                            <input class="formfeild" type="text" name="city" placeholder="Enter Your City" maxlength="40">
+                    
+                            <!-- State/Province -->
+                            <input class="formfeild" type="text" name="state" placeholder="Enter Your State/Province" maxlength="20">
+                            
+                            <!-- Submit button -->
+                            <input type="submit" class="formfeild" name="submit" value="Submit">
+                        </div>
+                    </form>
+                    
+                    
             </div>
             </div>
         </div>
